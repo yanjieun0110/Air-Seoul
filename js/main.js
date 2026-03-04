@@ -340,7 +340,7 @@ window.onload = function () {
   const tabMap = { graph01: 'fukuoka', graph02: 'nhatrang', graph03: 'danang', graph04: 'osaka' };
   let graphData = {};
 
-  fetch('../json/graph.json')
+  fetch('./json/graph.json')
     .then(res => res.json())
     .then(data => {
       graphData = data;
