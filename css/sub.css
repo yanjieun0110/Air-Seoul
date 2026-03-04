@@ -170,20 +170,84 @@ html {
 
 #chat_box {
   position: fixed;
-  bottom: 0; right: 0;
-  width: 100%; height: 100%;
-  background-color: white;
-  border: 1px solid #ccc;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  padding: 15px;
-  border-radius: 10px;
-  z-index: 120000;
-
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 11000;
+  padding: 0 16px;
+  box-sizing: border-box;
   display: none;
-  font-size: var(--font-24);
+  flex-direction: column;
+}
+#chat_box .chat_top {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+#chat_box .chat_top .c_pro {
+  display: flex;
+  margin-bottom: 10px;
+}
+#chat_box .chat_top .c_pro .c_logo {
+  width: 40px;
+  margin-right: 8px;
+}
+#chat_box .chat_top .c_pro .c_logo img {
+  width: 100%;
+}
+#chat_box .chat_top .c_pro p {
+  font-size: 1.5rem;
+  color: #444;
+  font-weight: 600;
+}
+#chat_box .chat_top a {
+  color: #444;
+  font-size: 0.9375rem;
+}
+#chat_box hr {
+  color: #F0F0F0;
+  margin: 16px 0;
+}
+#chat_box .chat_bottom {
+  display: flex;
+}
+#chat_box .chat_bottom .c_logo {
+  width: 30px;
+  margin-right: 8px;
+}
+#chat_box .chat_bottom .c_logo img {
+  width: 100%;
+}
+#chat_box .chat_bottom .c_talk {
+  background-color: #F0F0F0;
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+#chat_box .chat_bottom .c_talk > a {
+  display: block;
+  width: 100%;
+  height: 35px;
+  background-color: white;
+  margin: 8px 0;
   text-align: center;
-  justify-content: center;
-  text-align: center;
+  line-height: 35px;
+  border-radius: 20px;
+}
+
+#chatClose i {
+  color: #444;
+  font-size: 1.5rem;
+}
+#chatClose {
+  border: none;
+  background-color: white;
+  font-size: 1.625rem;
+  position: absolute;
+  top: 10px;
+  right: 15px;
 }
 
 /********** tablet **********/
@@ -294,18 +358,27 @@ html {
     width: 70px;
   }
   #chat_box {
-    inset: auto;
-    bottom: 310px; right: 10px;
-    width: 500px; height: 600px;
-    border-radius: 10px;
-    font-size: var(--font-26);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-
+    bottom: 240px;
+    right: 10px;
+    width: 500px;
+    height: 600px;
+    border-radius: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 20px 16px;
+    box-sizing: border-box;
     display: none;
-    align-items: center;
-    justify-content: center;
   }
-
+  #chat_box .chat_top {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #chat_box .chat_top .c_pro {
+    margin: 0;
+  }
+  #chat_box hr {
+    margin: 32px 0;
+  }
   #chatClose {
     display: none;
   }
@@ -405,6 +478,33 @@ html {
     background-image: url('../images/link_icon.png');
     background-size: cover;
     margin-left: 5px;
+  }
+
+
+  #chat_box {
+    bottom: 270px;
+    right: 10px;
+    width: 500px;
+    height: 600px;
+    border-radius: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    padding: 20px 16px;
+    box-sizing: border-box;
+    display: none;
+  }
+  #chat_box .chat_top {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #chat_box .chat_top .c_pro {
+    margin: 0;
+  }
+  #chat_box hr {
+    margin: 32px 0;
+  }
+  #chatClose {
+    display: none;
   }
 } /*pc*/
 
