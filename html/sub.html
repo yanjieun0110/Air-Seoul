@@ -1,0 +1,538 @@
+ <!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0, user-scalable=no">
+  <title>Air Seoul</title>
+  <link rel="shortcut icon" href="../images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="../css/sub.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../css/gnb.css">
+
+
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <!--gnb-->
+  <script src="../js/gnb.js"></script>
+  <!--footer-->
+  <script src="../js/sub.js"></script>
+
+
+  <!-- 폰트 -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: "Noto Sans KR", sans-serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      display: block;
+    }
+
+    li {
+      list-style: none;
+    }
+  </style>
+</head>
+<body>
+  <header class="header" id="header">
+    <a href="../index.html" class="logo">
+      <img src="../images/air_seoul_logo.png" alt="로고">
+    </a>
+    <div class="menu_btn">
+      <img src="../images/menu_btn.png" alt="메뉴 버튼">
+    </div>
+
+    <div class="pc_header">
+      <ul class="utility">
+        <li>로그인</li>
+        <li>회원가입</li>
+        <li>고객센터</li>
+        <li>
+          <select id="language">
+            <option value="ko">한국어</option>
+            <option value="en">English</option>
+            <option value="jp">日本語</option>
+            <option value="zh">中文</option>
+          </select>
+        </li>
+      </ul>
+
+      <div class="pc_search">
+        <input type="search">
+        <i class="fa-solid fa-magnifying-glass"></i>
+
+        <div class="keywords">
+          <p>인기 검색어 <span>닫기</span></p>
+          <ul>
+            <li>후쿠오카</li>
+            <li>신혼여행</li>
+            <li>패키지 상품</li>
+            <li>제주도</li>
+            <li>나트랑</li>
+          </ul>
+        </div> <!--keywords-->
+      </div> <!--pc_search-->
+    </div>
+  </header> <!--header-->
+
+
+  <nav class="gnb">
+    <section class="gnb_top">
+      <div class="lang">
+        <i class="fa-solid fa-globe"></i>
+        <select id="language">
+          <option value="ko">한국어</option>
+          <option value="en">English</option>
+          <option value="jp">日本語</option>
+          <option value="zh">中文</option>
+        </select>
+      </div>
+
+      <i class="fa-solid fa-xmark" id="X_mark"></i>
+    </section> <!--gnb_top-->
+
+    <p class="nav_txt">로그인 하시고 <br> 다양한 서비스를 이용하세요!
+    </p>
+
+    <div class="top_img">
+      <img src="../images/gnb_img.png" alt="라인 이미지">
+    </div>
+
+    <div class="user_box">
+      <a class="join">회원가입</a>
+      <a class="login">로그인</a>
+    </div>
+
+    <div class="search_box">
+      <input type="search">
+      <i class="fa-solid fa-magnifying-glass"></i>
+
+      <div class="keywords">
+        <p>인기 검색어 <span>닫기</span></p>
+        <ul>
+          <li>후쿠오카</li>
+          <li>신혼여행</li>
+          <li>패키지 상품</li>
+          <li>제주도</li>
+          <li>나트랑</li>
+        </ul>
+      </div> <!--keywords-->
+    </div> <!--search_box-->
+
+    <div class="line"></div>
+
+    <section class="gnb_btns">
+      <a href="#gnb_btx01" class="choose">예약</a>
+      <a href="#gnb_btx02">나의 예약</a>
+      <a href="#gnb_btx03">서비스 안내</a>
+      <a href="#gnb_btx04">제휴</a>
+      <a href="#gnb_btx05">이벤트</a>
+      <a href="#gnb_btx06">회사 소개</a>
+      <a href="#gnb_btx06">기프트샵</a>
+    </section>
+
+    <section class="lnb_box">
+      <span id="gnb_btx01">예약</span>
+      <ul class="lnb01 lnb">
+        <li><a href="../html/sub.html">항공권 예매</a></li>
+        <li><a href="../html/sub.html">운항 정보</a></li>
+        <li><a href="../html/sub.html">예약/운임/수수료 안내</a></li>
+      </ul>
+
+      <span id="gnb_btx02">나의 예약</span>
+      <ul class="lnb02 lnb">
+        <li><a href="../html/sub.html">예약 조회/변경/환불</a></li>
+        <li><a href="../html/sub.html">온라인 체크인</a></li>
+        <li><a href="../html/sub.html">부가서비스 추가 구매</a></li>
+      </ul>
+
+      <span id="gnb_btx03">서비스 안내</span>
+      <ul class="lnb03 lnb">
+        <li><a href="../html/sub.html">공항 서비스</a></li>
+        <li><a href="../html/sub.html">도움이 필요한 고객</a></li>
+        <li><a href="../html/sub.html">블루펫 동반 고객</a></li>
+        <li><a href="../html/sub.html">양식 다운로드</a></li>
+        <li><a href="../html/sub.html">기내 서비스</a></li>
+        <li><a href="../html/sub.html">부가 서비스</a></li>
+      </ul>
+
+      <span id="gnb_btx04">제휴</span>
+      <ul class="lnb04 lnb">
+        <li><a href="../html/sub.html">제휴사</a></li>
+        <li><a href="../html/sub.html">호텔</a></li>
+        <li><a href="../html/sub.html">렌터카</a></li>
+        <li><a href="../html/sub.html">투어/액티비티</a></li>
+        <li><a href="../html/sub.html">여행 보험</a></li>
+        <li><a href="../html/sub.html">제휴 카드</a></li>
+      </ul>
+
+      <span id="gnb_btx05">이벤트</span>
+      <ul class="lnb05 lnb">
+        <li><a href="../html/sub.html">이벤트 프로모션</a></li>
+        <li><a href="../html/sub.html">블루 패스</a></li>
+      </ul>
+
+      <span id="gnb_btx06">회사 소개</span>
+      <ul class="lnb06 lnb">
+        <li><a href="../html/sub.html">브랜드 가치</a></li>
+        <li><a href="../html/sub.html">개요 및 연혁</a></li>
+        <li><a href="../html/sub.html">항공기 정보</a></li>
+        <li><a href="../html/sub.html">CI 소개</a></li>
+      </ul>
+
+      <span id="gnb_btn07"><a href="../html/sub.html">기프트샵</a></span>
+    </section> <!--lnb_box-->
+  </nav> <!--gnb-->
+
+  <section class="pc_lnb_wrap">
+    <ul class="pc_lnb">
+      <li>예약
+        <ul class="sub_lnb">
+          <li><a href="../html/sub.html">항공권 예매</a></li>
+          <li><a href="./html/sub.html">운항 정보</a></li>
+          <li><a href="../html/sub.html">예약/운임/수수료 안내</a></li>
+        </ul>
+      </li>
+
+      <li>나의 예약
+        <ul class="sub_lnb">
+          <li><a href="../html/sub.html">예약 조회/변경/환불</a></li>
+          <li><a href="../html/sub.html">온라인 체크인</a></li>
+          <li><a href="../html/sub.html">부가서비스 추가 구매</a></li>
+        </ul>
+      </li>
+
+      <li>서비스 안내
+        <ul class="sub_lnb">
+          <li><a href="../html/sub.html">공항 서비스</a></li>
+          <li><a href="../html/sub.html">도움이 필요한 고객</a></li>
+          <li><a href="../html/sub.html">블루펫 동반 고객</a></li>
+          <li><a href="../html/sub.html">양식 다운로드</a></li>
+          <li><a href="../html/sub.html">기내 서비스</a></li>
+          <li><a href="../html/sub.html">부가 서비스</a></li>
+        </ul>
+      </li>
+
+      <li>제휴
+        <ul class="sub_lnb">
+          <li><a href="../html/sub.html">제휴사</a></li>
+          <li><a href="../html/sub.html">호텔</a></li>
+          <li><a href="../html/sub.html">렌터카</a></li>
+          <li><a href="../html/sub.html">투어/액티비티</a></li>
+          <li><a href="../html/sub.html">여행 보험</a></li>
+          <li><a href="../html/sub.html">제휴 카드</a></li>
+        </ul>
+      </li>
+
+      <li>이벤트
+        <ul class="sub_lnb">
+          <li><a href="../html/sub.html">이벤트 프로모션</a></li>
+          <li><a href="../html/sub.html">블루 패스</a></li>
+        </ul>
+      </li>
+
+      <li>회사소개
+        <ul class="sub_lnb">
+          <li><a href="../html/sub.html">브랜드 가치</a></li>
+          <li><a href="../html/sub.html">개요 및 연혁</a></li>
+          <li><a href="../html/sub.html">항공기 정보</a></li>
+          <li><a href="../html/sub.html">CI 소개</a></li>
+        </ul>
+      </li>
+
+    </ul> <!--pc_lnb-->
+  </section>
+
+  <ul class="breadcrumb">
+    <li><a href="../index.html"><i class="fa-solid fa-house"></i></a></li>
+    <li><i class="fa-solid fa-angle-right"></i></li>
+    <li><a href="./sub.html">회사소개</a></li>
+    <li><i class="fa-solid fa-angle-right"></i></li>
+    <li>
+      <select id="tabSelect">
+        <option value="sub_tab01">브랜드 가치</option>
+        <option value="sub_tab02">개요 및 연혁</option>
+        <option value="sub_tab03">항공기 정보</option>
+        <option value="sub_tab04">CI 소개</option>
+      </select>
+    </li>
+  </ul>
+
+
+  <section class="sub_tab">
+    <input type="radio" id="sub_tab01" name="sub_tab" checked>
+    <input type="radio" id="sub_tab02" name="sub_tab">
+    <input type="radio" id="sub_tab03" name="sub_tab">
+    <input type="radio" id="sub_tab04" name="sub_tab">
+
+    <div class="label_box">
+      <label for="sub_tab01" class="label_chk">브랜드 가치</label>
+      <label for="sub_tab02">개요 및 연혁</label>
+      <label for="sub_tab03">항공기 정보</label>
+      <label for="sub_tab04">CI소개</label>
+    </div> <!--label_box-->
+
+    <div class="tab_box">
+      <section class="tab01">
+        <picture>
+          <source media="(min-width:1273px)" srcset="../images/sub_tab_pc.jpg">
+          <source media="(min-width:601px)" srcset="../images/sub_tab_tablet.jpg">
+          <source media="(min-width:320px)" srcset="../images/sub_tab_mobile.jpg">
+
+          <img src="../images/sub_tab.jpg" alt="서브탭이미지" style="width: 100%; object-fit: cover;">
+        </picture>
+
+      <p class="title">에어서울과 함께하는 여행</p>
+      <div class="txt_box">
+        <p>21세기에는 화려한 서비스만큼이나 “합리적인 선택”이 중요해졌습니다.</p>
+        <p>에어서울은 고객의 NEEDS를 맞춘 여행을 복잡한 선택 과정 없이 쉽게 완성할 수 있도록 돕습니다.</p>
+      </div> <!--txt_box-->
+
+      <section class="sub_wrap">
+        <div class="wrap01">
+          <picture>
+            <source media="(min-width:1273px)" srcset="../images/sub_img01_pc.jpg">
+            <source media="(min-width:601px)" srcset="../images/sub_img01_tablet.jpg">
+            <source media="(min-width:320px)" srcset="../images/sub_img01_mobile.jpg">
+
+            <img src="../images/sub_img01.jpg" alt="정시성&안정성이미지" style="width: 100%; object-fit: cover;">
+          </picture>
+
+          <div class="txt_box">
+            <p class="title">정시성 & 안정성</p>
+            <p>에어서울은 고객 안전을 최우선으로하여 정시 도착을 목표로 합니다.</p>
+          </div> <!--txt_box-->
+        </div> <!--wrap01-->
+
+        <div class="wrap02">
+          <picture>
+            <source media="(min-width:1273px)" srcset="../images/sub_img02_pc.jpg">
+            <source media="(min-width:601px)" srcset="../images/sub_img02_tablet.jpg">
+            <source media="(min-width:320px)" srcset="../images/sub_img02_mobile.jpg">
+
+            <img src="../images/sub_img02.jpg" alt="여행 DIY" style="width: 100%; object-fit: cover;">
+          </picture>
+
+          <div class="txt_box">
+            <p class="title">여행 D.I.Y</p>
+            <p>합리적인 항공 운임과 다양한 고객 맞춤형 서비스로 중/단거리 여행을 설계하며 차별화된 노선으로 여행의 폭을 넓힙니다.</p>
+          </div> <!--txt_box-->
+        </div> <!--wrap02-->
+
+        <div class="wrap03">
+          <picture>
+            <source media="(min-width:1273px)" srcset="../images/sub_img03_pc.jpg">
+            <source media="(min-width:601px)" srcset="../images/sub_img03_tablet.jpg">
+            <source media="(min-width:320px)" srcset="../images/sub_img03_mobile.jpg">
+
+            <img src="../images/sub_img03.jpg" alt="고객 서비스 A/S" style="width: 100%; object-fit: cover;">
+          </picture>
+
+          <div class="txt_box">
+            <p class="title">고객 서비스 A/S</p>
+            <p>에어서울의 A/S는 여행 전 여정에 있어 고객 맞춤형 케어를 제공한다는 의미이며, 고객의 피드백을 신속히 반영해 지속적으로 개선합니다.</p>
+          </div> <!--txt_box-->
+        </div> <!--wrap03-->
+      </section> <!--sub_wrap-->
+      
+      <p class="title">에어서울 윤리경영</p>
+      <div class="txt_box">
+        <p>에어서울은 투명경영과 책임경영을 기업이념으로 공유하고, 자유롭고 공정한 시장경제 질서를 존중하며, 제반 법규 및 기업윤리를 준수하는 기업활동을 통하여 기업가치와 공익적 가치를 지속적으로 제고합니다. 에어서울은 건실하고 신뢰 받는 기업으로서 사회적 책임과 역할을 다하고, 국가와 사회 발전에 기여하는 기업경영을 추구합니다.</p>
+      </div> <!--txt_box-->
+      
+      <div class="ethical_box">
+        <p class="title">공정하고 투명한 에어서울의 윤리경영</p>
+        <a href="../ethical_file01.pdf" class="down_btn" id="down_btn" download>
+          <span>윤리경영전문</span>
+          <div></div>
+        </a>
+      </div>
+      <ul class="txt_list">
+        <li>우리는 고객의 만족과 안전을 최우선의 가치로 삼는다.</li>
+        <li>우리는 투자자의 투자가치 증대를 위하여 최선을 다한다.</li>
+        <li>우리는 사내 모든 구성원을 존중하며 그들의 삶의 질 향상을 위하여 노력한다.</li>
+        <li>우리는 협력업체와 굳건한 믿음을 토대로 함께 성장을 추구한다.</li>
+        <li>우리는 공정경쟁의 가치를 지키며 건전한 산업 발전을 위하여 노력한다.</li>
+        <li>우리는 국가와 사회의 지속가능한 발전과 환경보전에 힘쓴다.</li>
+        <li>우리는 회사가 지향하는 핵심 가치를 공유하고 이를 실현을 위해 노력하며 책임을 다한다.</li>
+      </ul> <!--txt_box-->
+      </section><!--tab01-->
+
+      <section class="tab02">개요 및 연혁 화면입니다.</section>
+      <section class="tab03">항공기 정보 화면입니다.</section>
+      <section class="tab04">CI소개 화면입니다.</section>
+    </div> <!--tab_box-->
+  </section> <!--sub_tab-->
+  
+
+  <section class="widget">
+    <div id="chatBot">
+      <img src="../images/chatBot.png" alt="챗봇">
+    </div>
+
+    <div id="topBtn">
+      <a href="#header">
+        <img src="../images/topBtn.png" alt="탑버튼">
+      </a>
+    </div>
+  </section>
+
+  <div id="chat_box">
+    <p>이 화면은 챗봇 상담 화면입니다.</p>
+    <button id="chatClose">닫기</button>
+  </div>
+
+
+   <footer class="footer">
+    <section class="f_top_mobile">
+      <a href="./html/sub.html">회사소개</a>
+      <a href="./html/sub.html">항공교통이용사 서비스 계획</a>
+      <a href="./html/sub.html">여객운송약관</a>
+      <a href="./html/sub.html" class="bold">개인정보 처리방침</a>
+      <a href="./html/sub.html">홈페이지 이용약관</a>
+      <a href="./html/sub.html">이메일무단수집거부</a>
+    </section>
+
+    <ul class="f_top">
+      <li><a href="./html/sub.html">회사소개</a></li>
+      <li><a href="./html/sub.html">홍보센터(미디어룸)</a></li>
+      <li><a href="./html/sub.html">공지사항</a></li>
+      <li><a href="./html/sub.html">FAQ</a></li>
+      <li><a href="./html/sub.html">1:1 문의</a></li>
+      <li><a href="./html/sub.html">사이트맵</a></li>
+      <li><a href="./html/sub.html">여객운송약관</a></li>
+      <li><a href="./html/sub.html">운임안내</a></li>
+      <li><a href="./html/sub.html">기타 고지사항</a></li>
+      <li><a href="./html/sub.html">홈페이지 이용약관</a></li>
+      <li><a href="./html/sub.html" class="bold">개인정보 처리방침</a></li>
+      <li><a href="./html/sub.html">항공교통이용자 서비스 계획</a></li>
+      <li><a href="./html/sub.html">피해구제계획</a></li>
+      <li><a href="./html/sub.html">소비자 안전 관련 정보 공개</a></li>
+      <li><a href="./html/sub.html">이메일무단수집거부</a></li>
+    </ul>
+  
+    <section class="f_bottom">
+      <div class="logos">
+        <div class="logo"><a href="./index.html">
+          <img src="../images/air_seoul_logo.png" alt="에어서울로고">
+        </a></div>
+        <div class="sns">
+          <div class="insta"><a href="http://www.instagram.com">
+            <img src="../images/insta.png" alt="인스타그램">
+          </a></div>
+          <div class="facebook"><a href="http://www.facebook.com">
+            <img src="../images/facebook.png" alt="페이스북">
+          </a></div>
+          <div class="youtube"><a href="http://www.youtube.com">
+            <img src="../images/youtube.png" alt="유튜브">
+          </a></div>
+        </div>
+      </div> <!--logos-->
+
+      <div class="company_info">
+        <div class="aco_btn">
+          <p>기업정보 자세히 보기</p>
+          <i class="fa-solid fa-caret-down"></i>
+        </div>
+        <div class="aco_inner">
+          <p>에어서울 주식회사 대표이사 김중호</p>
+          <p>본사 소재지 : (우)07516 서울특별시 강서구 양천로 13</p>
+          <p>사업장 소재지 : (우)22382 인천광역시 중구 제2터미널대로 446(운서동, 인천국제공항 제2여객터미널)</p>
+          <p>국내선, 국제선 예약문의 1800-8100 (09:00~18:00)  |  해외에서 이용 시 +82-1800-8100  |  사업자 등록 번호 : 825-81-00091  |  통신판매업 신고번호 제 2016-인천중구-0199</p>
+          <p>호스팅 서버 위치 : 아시아나IDT(주) 전산센터(서울 강서구 오쇠동)  |  개인정보보호책임자 대표이사 김중호</p>
+        </div>
+      </div> <!--company_info-->
+
+      <ul class="pc_comInfo">
+        <li>에어서울 주식회사 대표이사 김중호</li>
+        <li>본사 소재지 : (우)07516 서울특별시 강서구 양천로 13</li>
+        <li>사업장 소재지 : (우)22382 인천광역시 중구 제2터미널대로 446(운서동, 인천국제공항 제2여객터미널)</li>
+        <li>국내선, 국제선 예약문의 1800-8100 (09:00~18:00)  |  해외에서 이용 시 +82-1800-8100  |  사업자 등록 번호 : 825-81-00091  |  통신판매업 신고번호 제 2016-인천중구-0199</li>
+        <li>호스팅 서버 위치 : 아시아나IDT(주) 전산센터(서울 강서구 오쇠동)  |  개인정보보호책임자 대표이사 김중호</li>  
+      </ul>
+
+      <div class="footer_img">
+        <div class="f_img01">
+          <img src="../images/footer01.png" alt="푸터이미지01">
+        </div>
+
+        <div class="f_img02">
+          <img src="../images/footer02.png" alt="푸터이미지02">
+        </div>
+
+        <div class="f_img03">
+          <img src="../images/footer03.png" alt="푸터이미지03">
+        </div>
+
+        <div class="f_img04">
+          <img src="../images/footer04.png" alt="푸터이미지04">
+        </div>
+      </div>
+
+      <p class="copyright">&copy; AIR SEOUL, Inc. All Rights Reserved.</p>
+    </section> <!--f_bottom-->
+  </footer> <!--footer-->
+
+  <nav class="bottom_nav">
+    <div class="b_nav01 b_nav">
+      <a href="../index.html">
+        <div class="b_img">
+          <img src="../images/b_nav01.png" alt="홈">
+        </div>
+        <p>홈</p>
+      </a>
+    </div>
+
+    <div class="b_nav02 b_nav">
+      <a href="./html/sub.html">
+        <div class="b_img">
+          <img src="../images/b_nav02.png" alt="예매">
+        </div>
+        <p>예매</p>
+      </a>
+    </div>
+
+    <div class="b_nav03">
+      <a href="./html/sub.html">
+        <div class="b_img">
+          <img src="../images/b_nav03.png" alt="온라인 체크인">
+        </div>
+        <p>온라인 체크인</p>
+      </a>
+    </div>
+
+    <div class="b_nav04 b_nav">
+      <a href="./html/sub.html">
+        <div class="b_img">
+          <img src="../images/b_nav04.png" alt="마이페이지">
+        </div>
+        <p>마이페이지</p>
+      </a>
+    </div>
+
+    <div class="b_nav05 b_nav" id="b_menu_btn">
+      <a href="!#">
+        <div class="b_img">
+          <img src="../images/b_nav05.png" alt="메뉴">
+        </div>
+        <p>메뉴</p>
+      </a>
+    </div>
+  </nav> <!--bottom_nav-->
+</body>
+</html>

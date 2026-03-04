@@ -1,0 +1,352 @@
+html,
+body {
+  font-size: 16px;
+}
+
+:root {
+  --point-color: #32A0FF;
+  --bg-gray: #F0F0F0;
+  --light-gray-color: #DEDEDE;
+  --dark-gray-color: #9E9E9E;
+  --sub-red-color: #FF6565;
+  --sub-yellow-color:#FFEB5F;
+
+  --font-semi:600;
+  --font-11:0.6875rem;
+  --font-12:0.75rem;
+  --font-13:0.8125rem;
+  --font-14:0.875rem;
+  --font-15:0.9375rem;
+  --font-16:1rem;
+  --font-18:1.125rem;
+  --font-20:1.25rem;
+  --font-22:1.375rem;
+  --font-24:1.5rem;
+  --font-26:1.625rem;
+  --font-30:1.875rem;
+}
+
+#calendarLayer {
+  position: fixed;
+  inset: 0;
+  background: white;
+  z-index: 9999;
+  display: none;
+  flex-direction: column;
+}
+
+#calendarLayer .cal_controls {
+  display: none;
+}
+
+#calendarLayer header {
+  height: 40px;
+  padding: 0 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  top: 0;
+  background: white;
+  z-index: 10;
+  flex-shrink: 0;
+}
+
+#calTitle {
+  font-size: var(--font-18);
+  font-weight: bold;
+}
+
+#calClose {
+  border: none;
+  background: none;
+  font-size: var(--font-24);
+  cursor: pointer;
+  color: #333;
+}
+
+
+#calendarWrap {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 8px;
+  display: block;
+}
+
+.month {
+  margin-bottom: 40px;
+}
+
+.month h3 {
+  font-size:var(--font-18);
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-align: left;
+  color: #111;
+}
+
+/* 요일 표시 (일~토) */
+.week {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin-bottom: 10px;
+  border-bottom: 1px solid #f5f5f5;
+  padding-bottom: 5px;
+}
+
+.week span {
+  text-align: center;
+  font-size: var(--font-13);
+  font-weight: 600;
+  color: #888;
+}
+
+.week span:first-child { color: #ff4d4d; }
+.week span:last-child { color: #4d7cff; }
+
+/* 날짜 그리드 */
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  row-gap: 8px; 
+}
+
+.days div {
+  aspect-ratio: 1 / 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-15);
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 8px;
+  position: relative;
+  transition: background 0.2s;
+}
+
+/* 날짜 아래 가격 스타일 */
+.days div .price {
+    font-size: var(--font-11);
+    color: #007aff;
+    margin-top: 2px;
+    font-weight: 400;
+}
+
+/* 시작일, 종료일 선택 시 배경색 */
+.days div.start, 
+.days div.end {
+    background-color: #007aff !important;
+    color: #fff !important;
+    border-radius: 8px;
+}
+
+/* 시작/종료일 안의 가격 글자색 흰색으로 변경 */
+.days div.start .price,
+.days div.end .price {
+    color: #fff !important;
+}
+
+/* 선택 범위 배경색 */
+.days div.range {
+    background-color: #e6f2ff !important;
+    border-radius: 0;
+}
+
+/* 빈 칸 클릭 방지 */
+.days div:empty {
+    cursor: default;
+    pointer-events: none;
+}
+
+/* 빈 공간 및 날짜 호버 효과 */
+.days div:not(:empty):hover {
+  background-color: #f0f6ff;
+}
+
+/* 가격 표시 툴팁 (JS에서 위치 조절용) */
+#plane_price {
+  position: absolute;
+  padding: 4px 8px;
+  background: #333;
+  color: #fff;
+  font-size: var(--font-11);
+  border-radius: 4px;
+  pointer-events: none;
+  display: none;
+  z-index: 100;
+}
+
+/*-------------------------------------------------- */
+
+/* 시작일과 종료일 */
+.days div.start, 
+.days div.end {
+  background-color: #007aff !important;
+  color: #fff !important;
+  font-weight: bold;
+}
+
+/* 선택 범위 하이라이트 */
+.days div.range {
+  background-color: #e6f2ff;
+  border-radius: 0;
+}
+
+/* 오늘 이전 날짜 처리 */
+.days div.disabled {
+  color: #ccc;
+  cursor: default;
+}
+
+
+/*********************************/
+@media all and (min-width: 601px) {
+  #calendarLayer header {
+    height: 65px;
+  }
+  #calClose {
+    font-size: var(--font-30);
+  }
+  #calTitle {
+    font-size: var(--font-30);
+  }
+
+  .days div {
+    font-size: var(--font-26);
+  }
+
+  .month h3 {
+    font-size: var(--font-30);
+  }
+
+  .week span {
+    font-size: var(--font-24);
+  }
+
+  .days div .price {
+    font-size: var(--font-18);
+  }
+} /*테블릿*/
+
+
+
+
+
+@media all and (min-width: 1025px) {
+  /* 1. 레이어 본체 : 화면 중앙 고정 */
+  #calendarLayer {
+    inset: auto !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 1100px !important; /* 2달이 넉넉히 보이는 너비 */
+    height: 820px !important; /* 날짜가 겹치지 않는 충분한 높이 */
+    display: none; 
+    flex-direction: column !important;
+    background: #fff !important;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.3);
+    overflow: hidden !important;
+  }
+
+  /* 2. 네비게이션 바 : 상단 버튼 영역 */
+  .cal_controls {
+    display: flex !important; 
+    height: 60px !important;
+    background: #f8f9fa !important;
+    border-bottom: 1px solid #eee !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 60px !important;
+    flex-shrink: 0 !important;
+
+    justify-content: space-between !important; 
+    padding: 0 40px !important;
+  }
+
+  .cal_btn {
+    background: #fff;
+    border: 1px solid #ddd;
+    width: 36px; height: 36px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+  }
+  .cal_btn:hover { background: #f0f0f0; }
+
+  /* 3. 달력 트랙 : #calendarWrap 자체가 기차가 되어 움직임 */
+  #calendarWrap {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;   /* 줄바꿈 금지 */
+    width: 200% !important;         /* 4달 = 화면 2배 너비 */
+    height: 100% !important;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    overflow: visible !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* 4. 개별 달 : 화면의 정확히 50% 차지 */
+  .month {
+    width: 25% !important;          /* 전체 200% 중 1/4 차지 */
+    flex-shrink: 0 !important;      /* 찌그러짐 방지 */
+    height: 100% !important;
+    padding: 30px 50px !important;
+    box-sizing: border-box !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+  }
+
+  .month h3 {
+    font-size: 24px !important;
+    margin-bottom: 25px !important;
+    font-weight: 700;
+  }
+
+  /* 5. 요일 영역 */
+  .week {
+    display: grid !important;
+    grid-template-columns: repeat(7, 1fr) !important;
+    width: 100% !important;
+    height: 40px !important;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 10px !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* 6. 날짜 그리드 : 2월 깨짐 방지를 위해 행 높이 고정 */
+  .days {
+    display: grid !important;
+    grid-template-columns: repeat(7, 1fr) !important;
+    grid-auto-rows: 85px !important; /* 모든 날짜 칸 높이를 동일하게 고정 */
+    width: 100% !important;
+    gap: 0 !important;
+  }
+
+  /* 7. 개별 날짜 칸 : 내부 가격과 날짜 겹침 방지 */
+  .days div {
+    aspect-ratio: auto !important;
+    height: 85px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    font-size: 18px !important;
+    border-radius: 8px !important;
+    padding: 5px 0 !important;
+    box-sizing: border-box !important;
+  }
+
+  .days div .price {
+    font-size: 14px !important;
+    margin-top: 6px !important;
+    color: #32A0FF;
+    font-weight: 500;
+  }
+}
