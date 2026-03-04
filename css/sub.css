@@ -149,13 +149,12 @@ html {
 }
 
 
-
 .widget {
   display: flex;
   flex-direction: column;
   gap: 10px;
   position: fixed;
-  bottom: 150px;
+  bottom: 100px;
   right: 10px;
   z-index: 110000;
 }
@@ -355,10 +354,10 @@ html {
   }
 
   .widget > div {
-    width: 70px;
+    width: 60px;
   }
   #chat_box {
-    bottom: 240px;
+    bottom: 300px;
     right: 10px;
     width: 500px;
     height: 600px;
@@ -480,9 +479,11 @@ html {
     margin-left: 5px;
   }
 
-
+  .widget > div {
+    width: 60px;
+  }
   #chat_box {
-    bottom: 270px;
+    bottom: 300px;
     right: 10px;
     width: 500px;
     height: 600px;
