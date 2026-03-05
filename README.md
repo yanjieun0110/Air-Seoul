@@ -63,7 +63,7 @@ $('.tip_name > li').on('click', function() {
 <클릭 후>
 <img width="1306" height="296" alt="image" src="https://github.com/user-attachments/assets/d63ec567-f0d4-4072-ad9b-9cd53407fd98" />
 
-***
+##
 
 /* 인기노선 스와이퍼 js */
 ```javascript
@@ -101,7 +101,7 @@ let swiper = new Swiper(".mySwiper", {
 });
 ```
 
-***
+##
 
 /* 예약 박스 count jQuery */
 ```javascript
@@ -134,7 +134,7 @@ document.querySelectorAll('.persons > div').forEach(person => {
 <카운트 감소>
 <img width="492" height="179" alt="image" src="https://github.com/user-attachments/assets/71280c5c-9839-4faa-b8f5-5b93bbd4c868" />
 
-***
+##
 
 /* 인포박스 토글 jQuery */
 ```javascript
@@ -154,7 +154,7 @@ $('#info').on('click', function (e) {
   
   <img width="437" height="265" alt="image" src="https://github.com/user-attachments/assets/1fab28d2-efa7-4807-8ba8-0d6e00777094" />
 
-***
+##
 
 /* 예매 선택 알림창 */
 ```javascript
@@ -185,7 +185,7 @@ $('#info').on('click', function (e) {
 <예약 완료 알림>
 <img width="1282" height="652" alt="image" src="https://github.com/user-attachments/assets/3ddf400b-5f05-49e0-8fb4-6c1e1ffb5921" />
 
-***
+##
 
 /* 모바일/테블릿 탭메뉴 스크롤 활성화 jQuery */
 ```javascript
@@ -215,7 +215,7 @@ $('.gnb').on('scroll', function () {
   <img width="435" height="447" alt="image" src="https://github.com/user-attachments/assets/8039fac4-8c40-420e-9366-e4dbb146d290" />
   <img width="420" height="340" alt="image" src="https://github.com/user-attachments/assets/417cceef-ddae-406e-ba7d-3f3bee034215" />
 
-***
+##
 
 /* 공항 하이라이트 + 출발지 제외 js */
 ```javascript
