@@ -25,7 +25,7 @@ $('.tip_name > li').on('click', function () {
     });
   } else {
     $('.tip_name > li').css('height', '');
-  } // li 스타일 초기화
+  }
 
   const isOpen = $current.hasClass('open');
 
@@ -41,12 +41,10 @@ $('.tip_name > li').on('click', function () {
         justifyContent: 'center'
       });
     }
-  } // 속성주기
+  }
 
-  // 클래스 토글
   $current.toggleClass('open').siblings().removeClass('open');
 
-  // 아이콘 변경
   $current.find('.icon').css('background-image', function () {
     const current = $(this).css('background-image');
     return current.includes('icon_on.png')
@@ -56,7 +54,7 @@ $('.tip_name > li').on('click', function () {
 
   $current.siblings().find('.icon')
     .css('background-image', "url('./images/icon_on.png')");
-}); //팁 아코디언 메뉴 및 아이콘 변경
+});
 
 <클릭 전>
 <img width="1321" height="297" alt="image" src="https://github.com/user-attachments/assets/e4b38aea-1874-41e5-a2ad-54f12262d840" />
@@ -96,7 +94,7 @@ let swiper = new Swiper(".mySwiper", {
         },
       }
     }
-}); //popular_swiper
+});
 
 
 /* 예약 박스 count jQuery */
@@ -121,7 +119,7 @@ document.querySelectorAll('.persons > div').forEach(person => {
       count++;
       countEl.textContent = count;
     });
-  }); //탑승객 인원 버튼
+  });
 
 <카운트 증가>
 <img width="470" height="208" alt="image" src="https://github.com/user-attachments/assets/0b4da7db-020a-4e56-81a4-23e650db20b5" />
@@ -134,21 +132,21 @@ $('#info').on('click', function (e) {
     e.stopPropagation();
 
     $('.i_box').toggle();
-  }); //인포버튼 (나이 계산기)
+  });
 
   $('body').on('click', function () {
     $('.i_box').css('display', 'none');
-  }); //i_box 바깥 창닫기
+  });
   $('.i_box').on('click', function (e) {
     e.stopPropagation();
-  }); //i_box는 제외
+  });
   
   <img width="437" height="265" alt="image" src="https://github.com/user-attachments/assets/1fab28d2-efa7-4807-8ba8-0d6e00777094" />
 
 
 /* 예매 선택 알림창 */
-  const $resBtn = $("#resBtn"); // 예약 버튼
-  const $dateBtn = $("#dateBtn"); // 날짜 버튼
+  const $resBtn = $("#resBtn"); 
+  const $dateBtn = $("#dateBtn");
 
   $resBtn.on("click", function () {
     const from = $(".route_box .from").text();
@@ -158,13 +156,11 @@ $('#info').on('click', function (e) {
     const child = $(".passenger .count").eq(0).text();
     const infant = $(".passenger .count").eq(1).text();
 
-    // 출발지/도착지 선택 여부 확인
     if (from === "출발" || to === "도착") {
       alert("출발지와 도착지를 모두 선택해주세요");
       return; // 선택 안 됐으면 예약 진행 중단
     }
 
-    // 예약 완료 팝업
     alert(
       `예약이 완료되었습니다.\n\n출발: ${from}\n도착: ${to}\n날짜: ${date}\n성인: ${adult}명\n아동: ${child}명\n유아: ${infant}명`
     );
