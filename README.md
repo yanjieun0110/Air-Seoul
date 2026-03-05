@@ -55,7 +55,7 @@ $('.tip_name > li').on('click', function() {
 
   $current.siblings().find('.icon')
     .css('background-image', "url('./images/icon_on.png')");
-});
+}); ```
 
 <클릭 전>
 <img width="1321" height="297" alt="image" src="https://github.com/user-attachments/assets/e4b38aea-1874-41e5-a2ad-54f12262d840" />
@@ -64,6 +64,7 @@ $('.tip_name > li').on('click', function() {
 
 
 /* 인기노선 스와이퍼 js */
+```javascript
 let swiper = new Swiper(".mySwiper", {
     lazy: {
         loadPrevNext: true,
@@ -95,10 +96,11 @@ let swiper = new Swiper(".mySwiper", {
         },
       }
     }
-});
+});```
 
 
 /* 예약 박스 count jQuery */
+```javascript
 document.querySelectorAll('.persons > div').forEach(person => {
     const minusBtn = person.querySelector('.minus');
     const plusBtn = person.querySelector('.plus');
@@ -120,7 +122,7 @@ document.querySelectorAll('.persons > div').forEach(person => {
       count++;
       countEl.textContent = count;
     });
-  });
+  });```
 
 <카운트 증가>
 <img width="470" height="208" alt="image" src="https://github.com/user-attachments/assets/0b4da7db-020a-4e56-81a4-23e650db20b5" />
@@ -129,6 +131,7 @@ document.querySelectorAll('.persons > div').forEach(person => {
 
 
 /* 인포박스 토글 jQuery */
+```javascript
 $('#info').on('click', function (e) {
     e.stopPropagation();
 
@@ -140,12 +143,13 @@ $('#info').on('click', function (e) {
   });
   $('.i_box').on('click', function (e) {
     e.stopPropagation();
-  });
+  });```
   
   <img width="437" height="265" alt="image" src="https://github.com/user-attachments/assets/1fab28d2-efa7-4807-8ba8-0d6e00777094" />
 
 
 /* 예매 선택 알림창 */
+```javascript
   const $resBtn = $("#resBtn"); 
   const $dateBtn = $("#dateBtn");
 
@@ -165,7 +169,7 @@ $('#info').on('click', function (e) {
     alert(
       `예약이 완료되었습니다.\n\n출발: ${from}\n도착: ${to}\n날짜: ${date}\n성인: ${adult}명\n아동: ${child}명\n유아: ${infant}명`
     );
-  });
+  });```
 
 <출/도착지 알림>
   <img width="466" height="147" alt="image" src="https://github.com/user-attachments/assets/54151e7c-4344-4424-853d-bb671fb943a3" />
@@ -174,6 +178,7 @@ $('#info').on('click', function (e) {
 
 
 /* 모바일/테블릿 탭메뉴 스크롤 활성화 jQuery */
+```javascript
 $('.gnb').on('scroll', function () {
     const container = $(this);
     const containerTop = container.offset().top;
@@ -195,12 +200,13 @@ $('.gnb').on('scroll', function () {
         }
       }
     });
-  });
+  });```
   <img width="435" height="447" alt="image" src="https://github.com/user-attachments/assets/8039fac4-8c40-420e-9366-e4dbb146d290" />
   <img width="420" height="340" alt="image" src="https://github.com/user-attachments/assets/417cceef-ddae-406e-ba7d-3f3bee034215" />
 
 
 /* 공항 하이라이트 + 출발지 제외 js */
+```javascript
   function updateAirportCheck() {
     document.querySelectorAll(".choose p").forEach(p => {
       p.classList.remove("ch_chk");
@@ -214,7 +220,7 @@ $('.gnb').on('scroll', function () {
         p.style.display = "block";
       }
     });
-  }
+  }```
   <출발지 선택 + 하이라이트>
   <img width="964" height="408" alt="image" src="https://github.com/user-attachments/assets/72d736a9-9959-4cb6-98a8-8ad44800b2bb" />
   <도착지 선택시 출발지 제외>
