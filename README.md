@@ -14,7 +14,8 @@
 --------------------------------------------------------
 
 /* 팁베너 토글 jQuery */
-$('.tip_name > li').on('click', function () {
+/* 팁배너 토글 jQuery */
+$('.tip_name > li').on('click', function() {
   const $current = $(this);
   const isPC = window.innerWidth >= 1025;
 
