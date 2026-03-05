@@ -201,7 +201,7 @@ $('#p_total').text($('.bxslider > div').length);// 총 슬라이드 수
   }); //i_box는 제외
 
 
-  /* 예매 선태 알림창 */
+  /* 예매 선택 알림창 */
   const $resBtn = $("#resBtn"); // 예약 버튼
   const $dateBtn = $("#dateBtn"); // 날짜 버튼
 
@@ -219,13 +219,6 @@ $('#p_total').text($('.bxslider > div').length);// 총 슬라이드 수
       return; // 선택 안 됐으면 예약 진행 중단
     }
 
-    // 요약 영역 업데이트
-    $(".sum_from").text(from);
-    $(".sum_to").text(to);
-    $(".sum_date").text(date);
-    $(".sum_adult").text(adult);
-    $(".sum_child").text(child);
-    $(".sum_infant").text(infant);
 
     // 예약 완료 팝업
     alert(
