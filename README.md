@@ -13,7 +13,9 @@
 
 --------------------------------------------------------
 
-/* 팁베너 토글 jQuery */
+/* 팁 배너 토글 jQuery */
+## 팁 배너를 클릭하면 토글 방식으로 콘텐츠가 펼쳐지도록 구현했으며, 배너의 상태에 따라 아이콘이 함께 변경되도록 처리했습니다.
+
 <클릭 전>
 <img width="1321" height="297" alt="image" src="https://github.com/user-attachments/assets/e4b38aea-1874-41e5-a2ad-54f12262d840" />
 <클릭 후>
@@ -66,6 +68,8 @@ $('.tip_name > li').on('click', function() {
 ##
 
 /* 인기노선 스와이퍼 js */
+## Swiper.js의 breakpoints 옵션을 활용하여 화면 크기에 따라 표시되는 슬라이드 개수가 달라지도록 인기 노선 슬라이더를 반응형으로 구현했습니다.
+
 ```javascript
 let swiper = new Swiper(".mySwiper", {
     lazy: {
@@ -104,6 +108,7 @@ let swiper = new Swiper(".mySwiper", {
 ##
 
 /* 예약 박스 count jQuery */
+## 버튼 클릭 이벤트를 통해 수량(count)을 증가 및 감소하도록 구현했으며, 조건문을 활용하여 특정 조건에서 알림창이 나타나도록 처리했습니다.
 <카운트 증가>
 <img width="470" height="208" alt="image" src="https://github.com/user-attachments/assets/0b4da7db-020a-4e56-81a4-23e650db20b5" />
 <카운트 감소>
