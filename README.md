@@ -5,11 +5,11 @@
 코딩기간 : 26/01/02 ~ 26/01/20 (19일)
 
 ## 🛠️ Tech Stack
-1. HTML 5
-2. CSS 3
+1. HTML
+2. CSS / SCSS
 3. JavaScript
 4. jQuery
-5. swiper.js
+5. Swiper
 
 --------------------------------------------------------
 
