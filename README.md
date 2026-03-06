@@ -67,8 +67,8 @@ $('.tip_name > li').on('click', function() {
 
 ##
 
-/* 인기노선 스와이퍼 js */
-## Swiper.js의 breakpoints 옵션을 활용하여 화면 크기에 따라 표시되는 슬라이드 개수가 달라지도록 인기 노선 슬라이더를 반응형으로 구현했습니다.
+## /* 인기노선 스와이퍼 js */
+→ Swiper.js의 breakpoints 옵션을 활용하여 화면 크기에 따라 표시되는 슬라이드 개수가 달라지도록 인기 노선 슬라이더를 반응형으로 구현했습니다.
 
 ```javascript
 let swiper = new Swiper(".mySwiper", {
@@ -107,8 +107,8 @@ let swiper = new Swiper(".mySwiper", {
 
 ##
 
-/* 예약 박스 count jQuery */
-## 버튼 클릭 이벤트를 통해 수량(count)을 증가 및 감소하도록 구현했으며, 조건문을 활용하여 특정 조건에서 알림창이 나타나도록 처리했습니다.
+## /* 예약 박스 count jQuery */
+→ 버튼 클릭 이벤트를 통해 수량(count)을 증가 및 감소하도록 구현했으며, 조건문을 활용하여 특정 조건에서 알림창이 나타나도록 처리했습니다.
 <카운트 증가>
 <img width="470" height="208" alt="image" src="https://github.com/user-attachments/assets/0b4da7db-020a-4e56-81a4-23e650db20b5" />
 <카운트 감소>
@@ -141,8 +141,8 @@ document.querySelectorAll('.persons > div').forEach(person => {
 
 ##
 
-/* 인포박스 토글 jQuery */
-## 아이콘에 클릭 이벤트를 적용하여 인포박스가 토글 방식으로 열리고 닫히도록 구현했습니다.
+## /* 인포박스 토글 jQuery */
+→ 아이콘에 클릭 이벤트를 적용하여 인포박스가 토글 방식으로 열리고 닫히도록 구현했습니다.
 
 <img width="437" height="265" alt="image" src="https://github.com/user-attachments/assets/1fab28d2-efa7-4807-8ba8-0d6e00777094" />
 
@@ -163,8 +163,8 @@ $('#info').on('click', function (e) {
 
 ##
 
-/* 예매 선택 알림창 */
-## 입력 조건에 맞지 않을 경우 알림창이 표시되도록 처리했으며, 조건을 모두 충족한 후 예약 버튼을 클릭하면 선택한 정보가 불러와져 화면에 동적으로 삽입되도록 구현했습니다.
+## /* 예매 선택 알림창 */
+→ 입력 조건에 맞지 않을 경우 알림창이 표시되도록 처리했으며, 조건을 모두 충족한 후 예약 버튼을 클릭하면 선택한 정보가 불러와져 화면에 동적으로 삽입되도록 구현했습니다.
 
 <출/도착지 알림>
 <img width="466" height="147" alt="image" src="https://github.com/user-attachments/assets/54151e7c-4344-4424-853d-bb671fb943a3" />
@@ -196,8 +196,8 @@ $('#info').on('click', function (e) {
 
 ##
 
-/* 모바일/테블릿 탭메뉴 스크롤 활성화 jQuery */
-## 
+## /* 모바일/테블릿 탭메뉴 스크롤 활성화 jQuery */
+→ 모바일/태블릿 환경에서 콘텐츠 스크롤 위치를 기준으로 해당 탭 메뉴에 `.choose` 클래스를 적용하여 활성화되도록 구현했으며, 선택된 탭이 보이도록 탭 메뉴 영역이 자동으로 스크롤되도록 처리했습니다.
 
 <img width="435" height="447" alt="image" src="https://github.com/user-attachments/assets/8039fac4-8c40-420e-9366-e4dbb146d290" />
 <img width="420" height="340" alt="image" src="https://github.com/user-attachments/assets/417cceef-ddae-406e-ba7d-3f3bee034215" />
@@ -229,8 +229,8 @@ $('.gnb').on('scroll', function () {
 
 ##
 
-/* 공항 하이라이트 + 출발지 제외 js */
-## 출발지와 도착지를 선택할 때 `.ch_chk` 클래스를 적용하여 선택 상태를 표시했으며, 출발지를 선택하면 동일한 항목이 도착지 목록에서는 표시되지 않도록 구현했습니다.
+## /* 공항 하이라이트 + 출발지 제외 js */
+→ 출발지와 도착지를 선택할 때 `.ch_chk` 클래스를 적용하여 선택 상태를 표시했으며, 출발지를 선택하면 동일한 항목이 도착지 목록에서는 표시되지 않도록 구현했습니다.
 
 <출발지 선택 + 하이라이트>
 <img width="964" height="408" alt="image" src="https://github.com/user-attachments/assets/72d736a9-9959-4cb6-98a8-8ad44800b2bb" />
