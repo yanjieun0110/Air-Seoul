@@ -142,6 +142,8 @@ document.querySelectorAll('.persons > div').forEach(person => {
 ##
 
 /* 인포박스 토글 jQuery */
+## 아이콘에 클릭 이벤트를 적용하여 인포박스가 토글 방식으로 열리고 닫히도록 구현했습니다.
+
 <img width="437" height="265" alt="image" src="https://github.com/user-attachments/assets/1fab28d2-efa7-4807-8ba8-0d6e00777094" />
 
 ```javascript
@@ -162,6 +164,8 @@ $('#info').on('click', function (e) {
 ##
 
 /* 예매 선택 알림창 */
+## 입력 조건에 맞지 않을 경우 알림창이 표시되도록 처리했으며, 조건을 모두 충족한 후 예약 버튼을 클릭하면 선택한 정보가 불러와져 화면에 동적으로 삽입되도록 구현했습니다.
+
 <출/도착지 알림>
 <img width="466" height="147" alt="image" src="https://github.com/user-attachments/assets/54151e7c-4344-4424-853d-bb671fb943a3" />
 <예약 완료 알림>
@@ -193,6 +197,8 @@ $('#info').on('click', function (e) {
 ##
 
 /* 모바일/테블릿 탭메뉴 스크롤 활성화 jQuery */
+## 
+
 <img width="435" height="447" alt="image" src="https://github.com/user-attachments/assets/8039fac4-8c40-420e-9366-e4dbb146d290" />
 <img width="420" height="340" alt="image" src="https://github.com/user-attachments/assets/417cceef-ddae-406e-ba7d-3f3bee034215" />
   
@@ -224,6 +230,8 @@ $('.gnb').on('scroll', function () {
 ##
 
 /* 공항 하이라이트 + 출발지 제외 js */
+## 출발지와 도착지를 선택할 때 `.ch_chk` 클래스를 적용하여 선택 상태를 표시했으며, 출발지를 선택하면 동일한 항목이 도착지 목록에서는 표시되지 않도록 구현했습니다.
+
 <출발지 선택 + 하이라이트>
 <img width="964" height="408" alt="image" src="https://github.com/user-attachments/assets/72d736a9-9959-4cb6-98a8-8ad44800b2bb" />
 <도착지 선택시 출발지 제외>
